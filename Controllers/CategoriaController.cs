@@ -50,5 +50,10 @@ namespace crud_ASP.Controllers
 
            return View(modelAtribute);
         }
+
+        public IActionResult Edit(string id)
+        {
+
+        }
     }
 }
