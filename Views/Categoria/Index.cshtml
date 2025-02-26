@@ -1,0 +1,32 @@
+﻿@{
+	Console.WriteLine("Vista de index, categorias.");
+	
+}
+
+<h1>Todas las categorias</h1>
+
+@model List<Categoria>
+Hola
+<a asp-action="Create">Crear nueva categoria.</a>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Acciones</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var categoria in Model)
+		{
+			<tr>
+				<td>@Html.DisplayFor(row => categoria.NombreCategoria)</td>
+				<td>
+					<a class="btn btn-primary">Editar</a>
+					<button>Borrar</button>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

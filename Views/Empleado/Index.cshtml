@@ -1,0 +1,27 @@
+﻿@{
+	Console.WriteLine("Holaaa");
+	//Layout = null;
+}
+
+<h1>Lista de empleados</h1>
+
+@model List<crud_ASP.Models.TableEmpleado>
+
+
+	<table class="table">
+		<thead>
+			<tr>
+			  <th>Nombre</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			@foreach (var empleado in Model) {
+				<tr>
+					<td>@Html.DisplayFor(row => empleado.Nombre)</td>
+				    <td>@Html.DisplayFor(row => empleado.Email)</td>
+				    <td>@Html.DisplayFor(row => empleado.Avatar)</td>
+				</tr>
+			}
+		</tbody>
+	</table>

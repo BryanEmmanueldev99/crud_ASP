@@ -1,0 +1,22 @@
+﻿@using crud_ASP.Models.ViewsModels
+
+@model CategoriaViewModel
+
+<form asp-action="Store">
+
+    <div asp-validation-summary="ModelOnly" class="form-group text-danger"></div>
+
+    <div class="form-group">
+        <label for="">Nombre categoria:</label>
+        <input type="text" class="form-control" asp-for="NombreCategoria">
+        <span asp-validation-for="NombreCategoria" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
